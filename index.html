@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B Y C | Registro y Protección de Marcas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- RESET Y ESTILOS GLOBALES --- */
+        :root {
+            --color-primario: #1a1a1a;
+            --color-secundario: #0044cc; /* Un azul corporativo y elegante */
+            --color-fondo: #ffffff;
+            --color-gris-claro: #f7f7f7;
+            --color-texto: #333333;
+            --ancho-maximo: 1100px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--ancho-maximo);
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: var(--color-primario);
+            font-weight: 600;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        section {
+            padding: 6rem 0;
+        }
+
+        /* --- HEADER Y NAVEGACIÓN --- */
+        .header {
+            background-color: var(--color-fondo);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-primario);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: var(--color-texto);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-secundario);
+        }
+
+        /* --- SECCIÓN HERO --- */
+        .hero {
+            background-color: var(--color-fondo);
+            text-align: center;
+            padding: 8rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .cta-button {
+            background-color: var(--color-primario);
+            color: var(--color-fondo);
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-secundario);
+        }
+        
+        /* --- SECCIÓN MARCAS (CLIENTES) --- */
+        .marcas {
+            background-color: var(--color-gris-claro);
+        }
+        
+        .marcas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .marca-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .marca-logo img {
+            max-width: 120px;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+
+        .marca-logo img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* --- SECCIÓN SERVICIOS --- */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .servicio-card {
+            border: 1px solid #e0e0e0;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .servicio-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--color-primario);
+            color: #a0a0a0;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        
+        footer .logo-footer {
+            color: var(--color-fondo);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            h2 { font-size: 2rem; }
+            .hero h1 { font-size: 2.5rem; }
+            
+            .header .container {
+                flex-direction: column;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            .nav-links a {
+                margin: 0 0.75rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">B Y C</a>
+            <nav class="nav-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#marcas">Clientes</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Protegemos el Activo más Importante: Tu Marca.</h1>
+                <p>Brindamos asesoría experta para el registro, protección y defensa de la propiedad intelectual de tu negocio.</p>
+                <a href="#contacto" class="cta-button">Solicitar Asesoría</a>
+            </div>
+        </section>
+
+        <section id="marcas" class="marcas">
+            <div class="container">
+                <h2>Marcas que Confían en Nosotros</h2>
+                <div class="marcas-grid">
+                    <div class="marca-logo">
+                        <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=MARCA+1" alt="Logo de Cliente 1">
+                    </div>
+                    <div class="marca-logo">
+                        <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=MARCA+2" alt="Logo de Cliente 2">
+                    </div>
+                    <div class="marca-logo">
+                        <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=MARCA+3" alt="Logo de Cliente 3">
+                    </div>
+                    <div class="marca-logo">
+                        <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=MARCA+4" alt="Logo de Cliente 4">
+                    </div>
+                    <div class="marca-logo">
+                        <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=MARCA+5" alt="Logo de Cliente 5">
+                    </div>
+                     <div class="marca-logo">
+                        <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=MARCA+6" alt="Logo de Cliente 6">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+                <div class="servicios-grid">
+                    <div class="servicio-card">
+                        <h3>Registro de Marcas</h3>
+                        <p>Aseguramos el registro de tu marca a nivel nacional e internacional, protegiendo tu identidad y evitando imitaciones.</p>
+                    </div>
+                    <div class="servicio-card">
+                        <h3>Defensa y Litigios</h3>
+                        <p>Defendemos tus derechos de propiedad intelectual ante infracciones, plagio o cualquier uso no autorizado.</p>
+                    </div>
+                    <div class="servicio-card">
+                        <h3>Asesoría Estratégica</h3>
+                        <p>Te guiamos en la gestión de tu portafolio de marcas para maximizar su valor y potenciar el crecimiento de tu negocio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="marcas">
+             <div class="container" style="text-align: center;">
+                <h2>Contacto</h2>
+                <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem auto;">
+                    ¿Listo para proteger tu marca? Contáctanos para recibir una asesoría personalizada.
+                </p>
+                <a href="mailto:contacto@byc.com" class="cta-button" style="background-color: var(--color-secundario);">enviarunmail@byc.com</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo-footer">B Y C</div>
+            <p>&copy; 2025 B Y C. Todos los derechos reservados.</p>
+            <p>Firma de Propiedad Intelectual</p>
+        </div>
+    </footer>
+
+</body>
+</html>
